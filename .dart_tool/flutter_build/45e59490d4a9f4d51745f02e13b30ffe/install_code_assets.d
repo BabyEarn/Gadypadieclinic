@@ -1,0 +1,1 @@
+ /Users/babyearn/Desktop/GadyPadieClinic/gadypadieclinic/.dart_tool/flutter_build/45e59490d4a9f4d51745f02e13b30ffe/native_assets.json: 
