@@ -25,17 +25,20 @@ class ReadmoreCategoryPage extends StatelessWidget {
       ),
       body: Padding(
         padding: EdgeInsets.all(16),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text('CATEGORY',
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'CATEGORY',
                 style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    color: Color(0xFFE49092))),
-            SizedBox(height: 10),
-            Expanded(
-              child: Container(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: Color(0xFFE49092),
+                ),
+              ),
+              SizedBox(height: 10),
+              Container(
                 padding: EdgeInsets.all(20),
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
@@ -53,15 +56,18 @@ class ReadmoreCategoryPage extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          Text(category,
-                              style: TextStyle(
-                                  fontSize: 22,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.white)),
+                          Text(
+                            category,
+                            style: TextStyle(
+                              fontSize: 22,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                            ),
+                          ),
                           SizedBox(height: 20),
                           ...details
                               .map((detail) => _buildItem(detail))
-                              .toList()
+                              .toList(),
                         ],
                       ),
                     ),
@@ -76,8 +82,9 @@ class ReadmoreCategoryPage extends StatelessWidget {
                   ],
                 ),
               ),
-            ),
-          ],
+              SizedBox(height: 24),
+            ],
+          ),
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
