@@ -338,7 +338,13 @@ class _DateTimePageState extends State<DateTimePage> {
 
           bool isOverlap =
               isOverlapping(candidateStart, _serviceDuration, bookedSlots);
+
+          // เพิ่มให้หมอพักกลางวัน 12:00–13:00
+          bool isDuringLunchBreak =
+              candidateStart.hour >= 12 && candidateStart.hour < 13;
+
           if (!isOverlap &&
+              !isDuringLunchBreak &&
               candidateEnd.isBefore(DateTime(
                 _selectedDay.year,
                 _selectedDay.month,
